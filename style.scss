@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+$Yellow: hsl(47, 88%, 63%);
+$White: hsl(0, 0%, 100%);
+$Gray_500: hsl(0, 0%, 42%);
+$Gray_950: hsl(0, 0%, 7%);
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    min-height: 100vh;
+    background-color: $Yellow;
+    color: $Gray_950;
+}
+
+.card{
+    background-color: $White;
+    width: 336px;
+    border-radius: 10px;
+    border: 1px solid $Gray_950;
+    padding: 20px;
+    box-shadow: 8px 8px black;
+
+    img{
+        border-radius: 10px;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+
+        div:nth-child(1){
+            background-color: $Yellow;
+            width: auto;
+            width: 65px;
+            text-align: center;
+            font-weight: 800;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        div:nth-child(2){
+            font-size: 14px;
+        }
+
+        div:nth-child(3){
+            font-weight: 800;
+            font-size: 23px;
+
+            &:hover{
+                color: $Yellow;
+                cursor: pointer;
+            }
+        }
+
+        div:nth-child(4){
+            color: $Gray_500;
+            margin-bottom: 10px;
+            line-height: 25px;
+        }
+
+        div:nth-child(5){
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 800;
+            font-size: 15px;
+
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .card{
+        width: 290px;
+
+        img{
+            width: 290px;
+        }
+    }
+}
